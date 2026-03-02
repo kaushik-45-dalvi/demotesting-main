@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-bold bg-primary text-primary-foreground border-2 border-black shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-button transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-bold bg-secondary text-secondary-foreground border-2 border-black shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-button transition-all duration-200;
+  }
+  
+  .card-brutalist {
+    @apply bg-card border-2 border-black shadow-hard-lg p-6 hover:-translate-y-1 hover:shadow-hard-hover transition-all duration-200;
+  }
+  
+  .input-brutalist {
+    @apply flex h-12 w-full border-2 border-black bg-white px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}
